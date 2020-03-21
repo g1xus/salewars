@@ -1,10 +1,12 @@
 .header
-    padding: 10px 0
+    background: $info url(../img/header-bg.jpg) no-repeat center
+    background-size: cover
     &-wrapper
         display: flex
         align-items: center
         justify-content: space-between
         flex-wrap: wrap
+        padding: 10px 0
         @media screen and ( max-width: 992px )
             flex-direction: column
         @media screen and ( max-width: 768px )
@@ -14,34 +16,45 @@
             margin-bottom: 30px
     &-nav
         @media screen and ( max-width: 768px )
-            display: flex
             flex-direction: column
-            flex-basis: 100%
             text-align: center
-            transform: translateX(-200%)
+            transform: translateX(-120%)
             transition: all .5s ease-in
-            background-color: #fff
+            display: flex
+            position: absolute
+            width: 100%
+            top: 120px
+            z-index: 2
+            background-color: #ffd62f
+            padding: 20px 20px
+        @media screen and ( max-width: 992px )
+            margin-bottom: 30px
         &_active
-            transform: translateX(0)
+            transform: translateX(-30px)
         &__link
             @include medFont
             margin-right: 25px
             font-size: 14px
-            text-decoration: none
             @media screen and ( max-width: 992px )
                 margin-right: 10px
             @media screen and ( max-width: 768px )
                 margin-top: 20px
+                font-size: 18px
+            &:first-child
+                @media screen and ( max-width: 768px )
+                    margin-top: 0
             &:last-child
                 margin-right: 0
                 color: $danger
-                &:hover
-                    color: lighten($danger, 20%)
+                @media screen and ( min-width: 992px )
+                    &:hover
+                        color: lighten($danger, 20%)
     &-toggler
         width: 33px
         height: 33px
         position: relative
         display: none
+        z-index: 3
         @media screen and ( max-width: 768px )
             display: block
             
@@ -68,7 +81,55 @@
                 &-active
                     top: 11px
                     transform: rotate(-45deg)
-
+    &-hero-parallax
+        &__wrapper
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            overflow: hidden
+            margin-bottom: 56px
+            @media screen and ( min-width: 992px )
+                height: 75vh
+            @media screen and ( max-width: 992px )
+                height: 100%
+                padding: 20px 0
+            @media screen and ( max-width: 992px )
+                margin-bottom: 20px
                 
+        &__background 
+            position: absolute
+            width: 110%
+            height: 110%
+            background: url(../img/parallax/parallax-bg.png) no-repeat center
+            background-size: 1090px
+            @media screen and ( max-width: 992px )
+                background-size: 90%
+                height: 100%
+                width: 100%
+        &__content
+            z-index: 1
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+        &__suptext
+            width: 50%
+            margin: 0 auto 30px auto
+        &__maintext
+            width: 90%
+            margin: 0 auto 30px auto
+        &__subtext
+            width: 30%
+            margin: 0 auto 30px auto
+    &-information
+        text-align: center
+        &__text
+            @include medFont
+            line-height: 1.5
+            max-width: 550px
+            margin: 0 auto 45px auto
+        &__button
+            margin-bottom: 100px
                 
             

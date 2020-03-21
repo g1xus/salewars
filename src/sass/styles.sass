@@ -14,12 +14,35 @@
 		max-width: 540px
 .light-link
 	color: #fff
-	&:hover
-		color: darken(#fff, 20%)
+	text-decoration: none
+	@media screen and ( min-width: 992px )
+		&:hover
+			color: darken(#fff, 20%)
 .dark-link
 	color: #000
-	&:hover
-		color: lighten(#000, 20%)
+	text-decoration: none
+	@media screen and ( min-width: 992px )
+		&:hover
+			color: lighten(#000, 20%)
+.button
+	@include medFont
+	padding: 20px 45px
+	border-radius: 10px
+	background-color: $danger
+	font-size: 16px
+	text-transform: uppercase
+	border: none
+	color: #fff
+	transition-duration: .3s
+	@media screen and ( min-width: 992px)
+		&:hover
+			background-color: lighten($danger, 10%)
+			cursor: pointer
+			box-shadow: 0 0 15px lighten($danger, 10%)
+	@media screen and ( max-width: 768px )
+		font-size: 14px
+		padding: 15px 30px
+		
 @import 'blocks/header'
 @import 'fonts'
 

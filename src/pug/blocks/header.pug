@@ -6,7 +6,7 @@ mixin header
     header.header
         .container
             .header-wrapper
-                a.header-logo(href="http://g1xus.ru/salewars")
+                a.header-logo(href="http://g1xus.ru/salewars", title='Битва Скидок')
                     img(src="img/logotype.png", alt="БИТВА СКИДОК")
                 .header-toggler
                     span.header-toggler__element.header-toggler__element_1
@@ -22,3 +22,17 @@ mixin header
                         {'href' : '#', 'title' : 'Контакты'},
                         {'href' : '#', 'title' : 'Учавствовать'}
                     ])
+        .header-hero-parallax__wrapper
+            .header-hero-parallax__background
+            .header-hero-parallax__content 
+                img.header-hero-parallax__suptext(src="img/parallax/sup-text.jpg", alt="Станьте участником")
+                img.header-hero-parallax__maintext(src="img/parallax/main-text.png", alt="Станьте участником")
+                img.header-hero-parallax__subtext(src="img/parallax/sub-text.png", alt="Станьте участником")
+        .header-information
+            p.header-information__text
+                strong «Битва Скидок» — городская распродажа, 
+                br
+                | которая пройдет в розничных магазинах и компаниях Челябинска.
+                | Рекламная кампания проекта охватит более миллиона жителей 
+                | города и области.
+            button.button.header-information__button(href="#") Участвовать
