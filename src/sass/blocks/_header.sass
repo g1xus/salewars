@@ -14,6 +14,10 @@
     &-logo
         @media screen and ( max-width: 992px )
             margin-bottom: 30px
+        img
+            @media screen and ( max-width: 992px )
+                max-width: 150px
+            
     &-nav
         @media screen and ( max-width: 768px )
             flex-direction: column
@@ -107,21 +111,35 @@
                 background-size: 90%
                 height: 100%
                 width: 100%
+            @media screen and ( max-width: 768px )
+                background: none
+                
         &__content
             z-index: 1
             display: flex
             flex-direction: column
             align-items: center
             justify-content: center
+            max-width: 100%
+            text-align: center
         &__suptext
             width: 50%
-            margin: 0 auto 30px auto
+            margin-bottom: 30px 
+            @media screen and ( max-width: 576px )
+                margin-bottom: 15px
+                
         &__maintext
             width: 90%
-            margin: 0 auto 30px auto
+            margin-bottom: 30px 
+            @media screen and ( max-width: 576px )
+                margin-bottom: 15px
+                
         &__subtext
             width: 30%
-            margin: 0 auto 30px auto
+            margin-bottom: 30px 
+            @media screen and ( max-width: 576px )
+                margin-bottom: 15px
+                
     &-information
         text-align: center
         &__text
@@ -129,6 +147,7 @@
             line-height: 1.5
             max-width: 550px
             margin: 0 auto 45px auto
+            font-size: 16px
         &__button
             margin-bottom: 100px
                 
