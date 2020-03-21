@@ -1,0 +1,24 @@
+mixin navbar(navbar_items)
+    each item in navbar_items
+        a.header-nav__link.dark-link(href=item.href) #{item.title}
+
+mixin header
+    header.header
+        .container
+            .header-wrapper
+                a.header-logo(href="http://g1xus.ru/salewars")
+                    img(src="img/logotype.png", alt="БИТВА СКИДОК")
+                .header-toggler
+                    span.header-toggler__element.header-toggler__element_1
+                    span.header-toggler__element.header-toggler__element_2
+                    span.header-toggler__element.header-toggler__element_3
+                    
+                nav.header-nav
+                    +navbar([
+                        {'href' : '#', 'title' : 'Как будет проходить'},
+                        {'href' : '#', 'title' : 'Кто может учавствовать'},
+                        {'href' : '#', 'title' : 'Тарифы'},
+                        {'href' : '#', 'title' : 'Организаторы'},
+                        {'href' : '#', 'title' : 'Контакты'},
+                        {'href' : '#', 'title' : 'Учавствовать'}
+                    ])

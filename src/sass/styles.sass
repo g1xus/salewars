@@ -1,4 +1,27 @@
-body 
-	margin: 0
-	padding: 0
+@import 'vars'
+.container
+	max-width: 1140px
+	margin: 0 auto
+	padding: 0 15px
+	position: relative
+	@media screen and ( max-width: 992px )
+		max-width: 960px
+		
+	@media screen and ( max-width: 768px )
+		max-width: 720px
+
+	@media screen and ( max-width: 576px )
+		max-width: 540px
+.light-link
+	color: #fff
+	&:hover
+		color: darken(#fff, 20%)
+.dark-link
+	color: #000
+	&:hover
+		color: lighten(#000, 20%)
+@import 'blocks/header'
+@import 'fonts'
+
+		
 
