@@ -13,12 +13,12 @@ if ($(window).width() > '992'){
 
         $('.header-hero-parallax__background').css(
             'transform',
-            'translate(-' + x * 30 + 'px, -' + y * 30 + 'px'
+            'translate(-' + x * 40 + 'px, -' + y * 40 + 'px'
         )
 
         $('.header-hero-parallax__content').css(
             'transform',
-            'translate(' + x * 50 + 'px, ' + y * 50 + 'px'
+            'translate(' + x * 60 + 'px, ' + y * 60 + 'px'
         )
     });
 }

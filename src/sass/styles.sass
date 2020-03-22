@@ -1,4 +1,6 @@
+@import 'fonts'
 @import 'vars'
+
 .container
 	max-width: 1140px
 	margin: 0 auto
@@ -18,12 +20,14 @@
 	@media screen and ( min-width: 992px )
 		&:hover
 			color: darken(#fff, 20%)
+			text-decoration: none
 .dark-link
 	color: #000
 	text-decoration: none
 	@media screen and ( min-width: 992px )
 		&:hover
 			color: lighten(#000, 20%)
+			text-decoration: none
 .button
 	@include medFont
 	padding: 20px 45px
@@ -42,8 +46,46 @@
 	@media screen and ( max-width: 768px )
 		font-size: 14px
 		padding: 15px 10px
+.section
+	padding: 110px 0
+	@media screen and ( max-width: 768px )
+		padding: 70px 0
+	@media screen and ( max-width: 576px )
+		padding: 50px 0
+	&-headline
+		@include blackFont
+		font-size: 30px
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: 100px
+		position: relative
+		@media screen and ( max-width: 768px )
+			font-size: 22px
+		@media screen and ( max-width: 576px )
+			font-size: 18px
+.black
+	color: #000000
+.white
+	color: #fff
+
+.underline
+	width: 100%
+	&-yellow
+		&::after
+			content: ''
+			width: 650px
+			height: 23px
+			background-color: $info
+			position: absolute
+			bottom: 0
+			left: 0
+			z-index: -1
+			transform: translateX(-50%)
+			left: 50%
+			@media screen and ( max-width: 768px )
+				display: none
 @import 'blocks/header'
-@import 'fonts'
+@import 'blocks/how-we-work'
 
 		
 

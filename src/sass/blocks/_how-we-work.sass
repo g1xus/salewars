@@ -1,0 +1,24 @@
+.how-we-work
+    &__wrapper
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+    &__item
+        flex-basis: 27%
+        text-align: center
+        @media screen and ( max-width: 768px )
+            flex-basis: 60%
+            margin-bottom: 50px
+            
+    &__title
+        @include boldFont
+        font-size: 21px
+        margin-bottom: 35px
+    &__text
+        @include lightFont
+        font-size: 15px
+        line-height: 20px
+    &__link
+        @include medFont
+        font-size: 15px
+        text-decoration: underline
