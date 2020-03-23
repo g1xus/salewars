@@ -38,6 +38,8 @@
 	border: none
 	color: #fff
 	transition-duration: .3s
+	&:focus, &:active
+		outline: none
 	@media screen and ( min-width: 992px)
 		&:hover
 			background-color: lighten($danger, 10%)
@@ -54,11 +56,13 @@
 		padding: 50px 0
 	&-headline
 		@include blackFont
+		z-index: 5
 		font-size: 30px
 		text-align: center
 		text-transform: uppercase
 		margin-bottom: 100px
 		position: relative
+		
 		@media screen and ( max-width: 768px )
 			font-size: 22px
 		@media screen and ( max-width: 576px )
@@ -84,8 +88,24 @@
 			left: 50%
 			@media screen and ( max-width: 768px )
 				display: none
+	&-green
+		&::after
+			content: ''
+			width: 700px
+			height: 23px
+			background-color: $succes
+			position: absolute
+			bottom: 0
+			left: 0
+			z-index: -1
+			transform: translateX(-50%)
+			left: 50%
+			@media screen and ( max-width: 768px )
+				display: none
+
 @import 'blocks/header'
 @import 'blocks/how-we-work'
+@import 'blocks/who-can'
 
 		
 

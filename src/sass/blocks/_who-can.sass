@@ -1,0 +1,37 @@
+.who-can
+    background: #008aff url(../img/who-can/blue-bg.jpg) no-repeat center
+    background-size: cover
+    &__wrapper
+        display: flex
+        flex-direction: column
+    &-items
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &-item
+        display: flex
+        flex-direction: column
+        text-align: center
+        align-items: center
+        flex-basis: 16.5%
+        margin-bottom: 100px
+        @media screen and ( max-width: 992px )
+            flex-basis: 20%
+        @media screen and ( max-width: 768px )
+            flex-basis: 33%
+        @media screen and ( max-width: 576px )
+            flex-basis: 50%
+            
+        &__img
+            margin-bottom: 30px
+        &__title
+            @include medFont
+            font-size: 16px
+            max-width: 155px
+            margin: 0 auto
+    &-cta
+        text-align: center
+        &__title
+            @include blackFont
+            font-size: 30px
+            margin-bottom: 60px
