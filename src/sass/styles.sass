@@ -40,6 +40,7 @@
 	transition-duration: .3s
 	&:focus, &:active
 		outline: none
+		background-color: lighten($danger, 5%)
 	@media screen and ( min-width: 992px)
 		&:hover
 			background-color: lighten($danger, 10%)
@@ -76,18 +77,32 @@
 	width: 100%
 	&-yellow
 		&::after
-			content: ''
-			width: 650px
-			height: 23px
-			background-color: $info
-			position: absolute
-			bottom: 0
-			left: 0
-			z-index: -1
-			transform: translateX(-50%)
-			left: 50%
-			@media screen and ( max-width: 768px )
-				display: none
+				content: ''
+				width: 650px
+				height: 23px
+				background-color: $info
+				position: absolute
+				bottom: 0
+				left: 0
+				z-index: -1
+				transform: translateX(-50%)
+				left: 50%
+				@media screen and ( max-width: 992px )
+					display: none
+		&__for-what
+			&::after
+				content: ''
+				width: 900px
+				height: 23px
+				background-color: $info
+				position: absolute
+				bottom: 0
+				left: 0
+				z-index: -1
+				transform: translateX(-50%)
+				left: 50%
+				@media screen and ( max-width: 992px )
+					display: none
 	&-green
 		&::after
 			content: ''
@@ -102,10 +117,17 @@
 			left: 50%
 			@media screen and ( max-width: 768px )
 				display: none
-
+.section
+    &-cta
+        text-align: center
+        &__title
+            @include blackFont
+            font-size: 30px
+            margin: 50px 0 60px 0
 @import 'blocks/header'
 @import 'blocks/how-we-work'
 @import 'blocks/who-can'
+@import 'blocks/for-what'
 
 		
 

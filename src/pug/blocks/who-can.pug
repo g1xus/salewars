@@ -3,7 +3,10 @@ mixin who-can-item(imgPath, title)
     .who-can-item
         img.who-can-item__img(src=startPath + imgPath, alt=title)
         .who-can-item__title #{title}
-
+mixin section-cta(ctaTitle, buttonText)
+    .section-cta
+        h3.section-cta__title #{ctaTitle}
+        button.button #{buttonText}
 mixin who-can
     section.section.who-can.white
         .container
@@ -28,6 +31,4 @@ mixin who-can
                     +who-can-item('16.png', 'Застройщики недвижимости')
                     +who-can-item('17.png', 'Загородные поселки')
                     +who-can-item('18.png', 'Фитнес-центры')
-                .who-can-cta
-                    h3.who-can-cta__title Станьте частью масштабного городского проекта 
-                    button.button Участвовать
+                +section-cta('Станьте частью масштабного городского проекта', 'Участвовать')
