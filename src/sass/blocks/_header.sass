@@ -11,13 +11,29 @@
             flex-direction: column
         @media screen and ( max-width: 768px )
             flex-direction: row
+        &_active
+            background-color: #fff
+            width: 95%
+            padding-right: 50px
+            padding-left: 50px
+            position: fixed
+            left: 50%
+            margin-right: -50%
+            transform: translateX(-50%) 
+            z-index: 100
+            @media screen and ( max-width: 1020px )
+                flex-direction: column
+            @media screen and ( max-width: 768px )
+                flex-direction: row
     &-logo
         @media screen and ( max-width: 992px )
             margin-bottom: 30px
         img
             @media screen and ( max-width: 992px )
                 max-width: 150px
-            
+        &_active
+            @media screen and ( max-width: 1020px )
+                margin-bottom: 30px
     &-nav
         @media screen and ( max-width: 768px )
             flex-direction: column
@@ -34,7 +50,9 @@
         @media screen and ( max-width: 992px )
             margin-bottom: 30px
         &_active
-            transform: translateX(-30px)
+            transform: translateX(-50px)
+            &-fixed
+                background-color: #fff
         &__link
             @include medFont
             margin-right: 25px
@@ -110,14 +128,18 @@
                 background-size: 90%
                 height: 100%
                 width: 100%
-            @media screen and ( max-width: 768px )
-                background: none
             &_1
                 background: url(../img/parallax/parallax-big-red.png) no-repeat center
+                @media screen and ( max-width: 768px )
+                    background: none
             &_2
                 background: url(../img/parallax/parallax-blue.png) no-repeat center
+                @media screen and ( max-width: 768px )
+                    background: none
             &_3
                 background: url(../img/parallax/parallax-colors.png) no-repeat center
+                @media screen and ( max-width: 768px )
+                    background: none
         &__content
             z-index: 1
             display: flex
