@@ -15,15 +15,17 @@ mixin header
                     
                 nav.header-nav
                     +navbar([
-                        {'href' : '#', 'title' : 'Как будет проходить'},
-                        {'href' : '#', 'title' : 'Кто может учавствовать'},
+                        {'href' : '#how-we-work', 'title' : 'Как будет проходить'},
+                        {'href' : '#who-can', 'title' : 'Кто может учавствовать'},
                         {'href' : '#', 'title' : 'Тарифы'},
                         {'href' : '#', 'title' : 'Организаторы'},
                         {'href' : '#', 'title' : 'Контакты'},
                         {'href' : '#', 'title' : 'Учавствовать'}
                     ])
         .header-hero-parallax__wrapper
-            .header-hero-parallax__background
+            .header-hero-parallax__background.header-hero-parallax__background_1
+            .header-hero-parallax__background.header-hero-parallax__background_2
+            .header-hero-parallax__background.header-hero-parallax__background_3
             .header-hero-parallax__content 
                 img.header-hero-parallax__suptext(src="img/parallax/sup-text.jpg", alt="Станьте участником")
                 img.header-hero-parallax__maintext(src="img/parallax/main-text.png", alt="Станьте участником")
