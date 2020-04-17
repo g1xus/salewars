@@ -34,21 +34,3 @@ if ($(window).width() > '992'){
         )    
     });
 }
-function scrollBottom(){
-    $('.header-wrapper').addClass('header-wrapper_active');
-    $('.header-logo').addClass('header-logo_active');
-    $('.header-nav').addClass('header-nav_active-fixed');
-    
-}
-function scrollTop(){
-    $('.header-wrapper').removeClass('header-wrapper_active');
-    $('.header-logo').removeClass('header-logo_active');
-    $('.header-nav').removeClass('header-nav_active-fixed');
-    
-}
-$(window).on("scroll", function() {
-    if ($(window).scrollTop() > 180) 
-        scrollBottom()
-    if ($(window).scrollTop() < 180)
-        scrollTop()
-});
