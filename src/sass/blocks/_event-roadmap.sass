@@ -1,0 +1,131 @@
+.event-roadmap
+    background: url(../img/roadmap/roadmap-bg.jpg) top no-repeat
+    background-size: contain
+    @media screen and ( max-width: 992px )
+        background-size: cover
+        background-position-y: -200px
+    &-headline
+        text-align: center
+        display: flex
+        flex-direction: column
+        color: #fff
+        &__top
+            @include lightFont
+            font-size: 16px
+            margin-bottom: 40px
+        &__middle
+            @include medFont
+            font-size: 20px
+            background-color: #008aff
+            transform: rotate(-1deg)
+            padding: 14px
+            margin: 0 auto 30px auto
+        &__bottom
+            @include blackFont
+            font-size: 60px
+            text-shadow: 0 0 15px rgba(0, 0, 0, 0.25)
+            margin-bottom: 312px
+            @media screen and ( max-width: 992px )
+                margin-bottom: 200px
+            @media screen and ( max-width: 768px )
+                margin-bottom: 100px
+                font-size: 40px
+            @media screen and ( max-width: 576px )
+                font-size: 32px
+    &-parallax-content
+        z-index: 1
+        display: flex
+        flex-direction: column
+        position: relative
+        align-items: center
+        justify-content: center
+        max-width: 100%
+        text-align: center
+    &-map
+        display: flex
+        flex-direction: column
+        background-size: contain
+        justify-content: center
+        margin: 0 auto
+        background: url(../img/roadmap/roadmap.png) 335px 30px no-repeat
+        width: 100%
+        @media screen and ( max-width: 1100px )
+            background-position-x: 270px
+        @media screen and ( max-width: 992px )
+            background-position-x: 225px
+            background-size: 70%
+        @media screen and ( max-width: 768px )
+            background: none
+        &__element
+            display: flex
+            flex-direction: column
+            margin: 0 auto 100px auto
+            position: relative
+            @media screen and ( max-width: 768px )
+                margin: 0 0 20px 0
+                &::after
+                    content: ''
+                    width: 15px
+                    height: 15px
+                    background-color: #000000
+                    background: url(../img/down-arrow.svg)
+                    position: absolute
+                    transform: translateX(50%)
+                    right: 50%
+                    bottom: -25px
+                &:last-child
+                    &::after
+                        content: ''
+                        width: 0
+                        height: 0
+            
+            &_left
+                text-align: left
+                margin-left: 550px
+                @media screen and ( max-width: 1100px )
+                    margin-left: 500px
+                @media screen and ( max-width: 992px )
+                    margin-left: 400px  
+                    margin-bottom: 30px
+                @media screen and ( max-width: 768px )
+                    text-align: center
+                    margin-left: 0                 
+            &_right
+                text-align: right
+                margin-right: 550px    
+                margin-bottom: 250px
+                @media screen and ( max-width: 1100px )
+                    margin-right: 500px
+                @media screen and ( max-width: 992px )
+                    margin-right: 400px  
+                    margin-bottom: 180px
+                @media screen and ( max-width: 768px )
+                    text-align: center
+                    margin-right: 0
+                    margin-bottom: 20px
+            &_center
+                text-align: center
+                @media screen and ( max-width: 768px )
+                    text-align: center
+        &__headline
+            @include boldFont
+            font-size: 30px
+            margin-bottom: 10px
+            @media screen and ( max-width: 992px )
+                font-size: 24px
+                margin-bottom: 0
+            @media screen and ( max-width: 768px )
+                margin-bottom: 10px
+        &__parahraph
+            @include lightFont
+            font-size: 16px
+            width: 520px
+            @media screen and ( max-width: 1100px )
+                width: 450px
+            @media screen and ( max-width: 992px )
+                font-size: 14px
+                width: 350px
+            @media screen and ( max-width: 768px )
+                padding: 0 20px
+                margin: 0 auto
+            

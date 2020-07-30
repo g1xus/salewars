@@ -5,10 +5,8 @@
 	position: relative
 	@media screen and ( max-width: 992px )
 		max-width: 960px
-		
 	@media screen and ( max-width: 768px )
 		max-width: 720px
-
 	@media screen and ( max-width: 576px )
 		max-width: 540px
 .light-link
@@ -45,7 +43,7 @@
 			box-shadow: 0 0 15px lighten($danger, 10%)
 	@media screen and ( max-width: 768px )
 		font-size: 14px
-		padding: 15px 10px
+		padding: 15px 10px	
 .section
 	padding: 110px 0
 	@media screen and ( max-width: 768px )
@@ -60,28 +58,23 @@
 		text-transform: uppercase
 		margin-bottom: 100px
 		position: relative
-		
 		@media screen and ( max-width: 768px )
 			font-size: 22px
 		@media screen and ( max-width: 576px )
 			font-size: 18px
-.section
-    &-cta
-        text-align: center
-        &__title
-            @include blackFont
-            font-size: 30px
-            margin: 50px 0 60px 0
+.section-cta
+    text-align: center
+    &__title
+        @include blackFont
+        font-size: 30px
+        margin: 50px 0 60px 0
 @media screen and ( max-width: 768px )
-	.section
-		&-cta
-			&__title
-				font-size: 24px
+	.section-cta__title
+		font-size: 24px
 .black
 	color: #000000
 .white
 	color: #fff
-
 .underline
 	width: 100%
 	&-yellow

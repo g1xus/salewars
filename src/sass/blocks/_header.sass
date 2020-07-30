@@ -21,7 +21,7 @@
         @media screen and ( max-width: 768px )
             flex-direction: column
             text-align: center
-            transform: translateX(-150%)
+            transform: translateX(-200%)
             transition: all .5s ease-in
             display: flex
             position: absolute
@@ -31,12 +31,13 @@
             background-color: #ffd62f
             padding-bottom: 15px
             padding-top: 5px
+            margin-bottom: 0
         @media screen and ( max-width: 992px )
             margin-bottom: 30px
         &_active
-            transform: translateX(-50%)
-            left: 50%
-            margin-right: -50%
+            transform: translateX(50%) !important
+            margin-left: -50% !important
+            right: 50% !important
         &__link
             @include medFont
             margin-right: 25px
@@ -46,6 +47,7 @@
             @media screen and ( max-width: 768px )
                 margin-top: 20px
                 font-size: 18px
+                margin-right: 0
             &:first-child
                 @media screen and ( max-width: 768px )
                     margin-top: 0
@@ -86,67 +88,32 @@
                 &-active
                     top: 11px
                     transform: rotate(-45deg)
-    &-hero-parallax
-        &__wrapper
-            position: relative
-            display: flex
-            align-items: center
-            justify-content: center
-            overflow: hidden
-            margin-bottom: 56px
-            @media screen and ( min-width: 992px )
-                height: 75vh
-            @media screen and ( max-width: 992px )
-                height: 100%
-                padding: 20px 0
-            @media screen and ( max-width: 992px )
-                margin-bottom: 20px
-                
-        &__background 
-            position: absolute
-            width: 110%
-            height: 110%
-            background-size: 1090px
-            @media screen and ( max-width: 992px )
-                background-size: 90%
-                height: 100%
-                width: 100%
-            &_1
-                background: url(../img/parallax/parallax-big-red.png) no-repeat center
-                @media screen and ( max-width: 768px )
-                    background: none
-            &_2
-                background: url(../img/parallax/parallax-blue.png) no-repeat center
-                @media screen and ( max-width: 768px )
-                    background: none
-            &_3
-                background: url(../img/parallax/parallax-colors.png) no-repeat center
-                @media screen and ( max-width: 768px )
-                    background: none
-        &__content
-            z-index: 1
-            display: flex
-            flex-direction: column
-            align-items: center
-            justify-content: center
-            max-width: 100%
-            text-align: center
-        &__suptext
-            width: 50%
-            margin-bottom: 30px 
-            @media screen and ( max-width: 576px )
-                margin-bottom: 15px
-                
-        &__maintext
-            width: 90%
-            margin-bottom: 30px 
-            @media screen and ( max-width: 576px )
-                margin-bottom: 15px
-        &__subtext
-            width: 30%
-            margin-bottom: 30px 
-            @media screen and ( max-width: 576px )
-                margin-bottom: 15px
+    &-hero
+        &-parallax
+            &__content
+                z-index: 1
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: center
+                max-width: 100%
+                text-align: center
+            &__suptext
+                width: 50%
+                margin-bottom: 30px 
+                @media screen and ( max-width: 576px )
+                    margin-bottom: 15px
+
+            &__maintext
+                width: 90%
+                margin-bottom: 30px 
+                @media screen and ( max-width: 576px )
+                    margin-bottom: 15px
+            &__subtext
+                width: 30%
+                margin-bottom: 30px 
+                @media screen and ( max-width: 576px )
+                    margin-bottom: 15px
     &-information
         text-align: center
         &__text
@@ -157,5 +124,3 @@
             font-size: 16px
         &__button
             margin-bottom: 100px
-
-            
