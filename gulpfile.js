@@ -39,7 +39,8 @@ let { src, dest } = require("gulp"),
   ttf2woff = require("gulp-ttf2woff"),
   ttf2woff2 = require("gulp-ttf2woff2"),
   fonter = require("gulp-fonter"),
-  sourcemaps = require('gulp-sourcemaps');
+  sourcemaps = require('gulp-sourcemaps'),
+  pug = require('gulp-pug');
 
 function browserSync(params) {
   browsersync.init({
@@ -51,15 +52,12 @@ function browserSync(params) {
   });
 }
 
-function html() {
-  return src(path.src.html)
-    .pipe(
-      fileinclude({
-        prefix: "@@",
-      })
-    )
-    .pipe(dest(path.build.html))
-    .pipe(browsersync.stream());
+function pugCompile() {
+  return gulp.src('src/pug/pages/*.pug')
+      .pipe(pug({
+          pretty:true
+      }))
+      .pipe(dest(path.build.html))
 }
 
 function css() {
@@ -173,25 +171,25 @@ function fontsStyle(params) {
 function cb() {}
 
 function watchFiles(params) {
-  gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.img], images);
+  gulp.watch(['src/pug/pages/*.pug', 'src/pug/blocks/*.pug'], pugCompile);
 }
 
 function clean(params) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle),
+let build = gulp.series(clean, gulp.parallel(js, css, images, fonts, pugCompile), fontsStyle),
   watch = gulp.parallel(build, watchFiles, browserSync);
 
 exports.js = js;
 exports.css = css;
-exports.html = html;
 exports.fonts = fonts;
 exports.build = build;
 exports.watch = watch;
 exports.images = images;
 exports.default = watch;
+exports.pugCompile = pugCompile;
 exports.fontsStyle = fontsStyle;

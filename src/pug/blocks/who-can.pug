@@ -1,0 +1,34 @@
+- var startPath = 'img/who-can/'
+mixin who-can-item(imgPath, title)
+    .who-can-item
+        img.who-can-item__img(src=startPath + imgPath, alt=title)
+        .who-can-item__title #{title}
+mixin section-cta(ctaTitle, buttonText)
+    .section-cta
+        h3.section-cta__title #{ctaTitle}
+        button.button #{buttonText}
+mixin who-can
+    section.section.who-can.white
+        .container
+            +headline('Кто может участвовать?', 'underline-green')
+            .who-can__wrapper
+                .who-can-items
+                    +who-can-item('1.png', 'Обувь')
+                    +who-can-item('2.png', 'Одежда')
+                    +who-can-item('3.png', 'Меха')
+                    +who-can-item('4.png', 'Детские товары')
+                    +who-can-item('5.png', 'Ювелирные изделия')
+                    +who-can-item('6.png', 'Бытовая электроника')
+                    +who-can-item('7.png', 'Стройматериалы')
+                    +who-can-item('8.png', 'Посуда')
+                    +who-can-item('9.png', 'Спортивные товары')
+                    +who-can-item('10.png', 'Товары для активного отдыха')
+                    +who-can-item('11.png', 'Продукты')
+                    +who-can-item('12.png', 'Автомобили и комплектующие')
+                    +who-can-item('13.png', 'Медицинские центры')
+                    +who-can-item('14.png', 'Стоматологии')
+                    +who-can-item('15.png', 'Салоны оптики')
+                    +who-can-item('16.png', 'Застройщики недвижимости')
+                    +who-can-item('17.png', 'Загородные поселки')
+                    +who-can-item('18.png', 'Фитнес-центры')
+                +section-cta('Станьте частью масштабного городского проекта', 'Участвовать')
