@@ -4,6 +4,8 @@
     @media screen and ( max-width: 992px )
         background-size: cover
         background-position-y: -200px
+    @media screen and ( max-width: 576px )
+        background-position-y: -130px
     &-headline
         text-align: center
         display: flex
@@ -13,6 +15,10 @@
             @include lightFont
             font-size: 16px
             margin-bottom: 40px
+            @media screen and ( max-width: 576px )
+                font-size: 14px
+                padding: 0 10px
+                margin-bottom: 20px
         &__middle
             @include medFont
             font-size: 20px
@@ -20,6 +26,8 @@
             transform: rotate(-1deg)
             padding: 14px
             margin: 0 auto 30px auto
+            @media screen and ( max-width: 576px )
+                margin-bottom: 20px
         &__bottom
             @include blackFont
             font-size: 60px
@@ -31,7 +39,7 @@
                 margin-bottom: 100px
                 font-size: 40px
             @media screen and ( max-width: 576px )
-                font-size: 32px
+                font-size: 28px
     &-parallax-content
         z-index: 1
         display: flex
@@ -126,6 +134,6 @@
                 font-size: 14px
                 width: 350px
             @media screen and ( max-width: 768px )
-                padding: 0 20px
+                width: 280px
                 margin: 0 auto
             
