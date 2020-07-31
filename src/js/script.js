@@ -48,7 +48,7 @@ if ($(window).width() > "992") {
       "translate(" + x * 100 + "px, " + y * 30 + "px"
     );
     $(".parallax__background-event_4").css(
-      "transform", `translate(${(x * 110) - 80}px, ${(y * 10) - 420}px)`
+      "transform", `translate(${(x * 110) - 70}px, ${(y * 10) - 220}px)`
     );
 
   });

@@ -1,0 +1,39 @@
+.ad-company
+    background: url(../img/yellow-bg.jpg) center no-repeat #ffd52a
+    &-partners
+        display: flex
+        justify-content: space-between
+        margin-bottom: 80px
+        flex-wrap: wrap
+        @media screen and ( max-width: 576px )
+            justify-content: center
+        &__element
+            text-align: center
+            flex-basis: 14%
+            @media screen and ( max-width: 992px )
+                flex-basis: 25%
+                margin-bottom: 30px
+            @media screen and ( max-width: 576px )
+                flex-basis: 50%
+        &__img
+            display: block !important
+            margin: 0 auto 30px auto
+            @media screen and ( max-width: 992px )
+                margin-bottom: 15px
+        &__title
+            @include medFont
+            font-size: 16px
+    &-description
+        @include lightFont
+        font-size: 16px
+        text-align: center
+        width: 80%
+        margin: 0 auto 80px auto
+    &__wecan
+        @include boldFont
+        font-size: 23px
+        margin: 0 auto
+        display: block
+        text-align: center
+        @media screen and ( max-width: 576px )
+            font-size: 18px

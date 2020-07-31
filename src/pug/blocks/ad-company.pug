@@ -1,0 +1,20 @@
+mixin ad-company-element(path, title)
+    .ad-company-partners__element
+        img.ad-company-partners__img(src=`img/ad-company/${path}.jpg`, alt=`${title}`)
+        span.ad-company-partners__title #{title}
+mixin ad-company
+    section.section.ad-company.black
+        .container
+            .section-headline.section-headline_ad
+                h2.section-headline__text.underline-white Рекламная кампания “Битвы скидок”
+            p.ad-company-description Мы будем использовать все рекламные возможности социальных сетей, 
+                | городских сайтов и поисковиков. В оффлайне основным каналом будет наружная реклама.
+            .ad-company-partners
+                +ad-company-element('vk', 'Вконтакте')
+                +ad-company-element('fb', 'Facebook')
+                +ad-company-element('ok', 'Одноклассники')
+                +ad-company-element('ig', 'Instagram')
+                +ad-company-element('ya', 'Яндекс')
+                +ad-company-element('google', 'Google')
+                +ad-company-element('chb', 'Наружная реклама')
+            span.ad-company__wecan Приведем людей из интернета в ваш магазин!

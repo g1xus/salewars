@@ -33,6 +33,7 @@
 	border: none
 	color: #fff
 	transition-duration: .3s
+	z-index: 100
 	&:focus, &:active
 		outline: none
 		background-color: lighten($danger, 5%)
@@ -53,15 +54,19 @@
 	&-headline
 		@include blackFont
 		z-index: 5
-		font-size: 30px
+		font-size: 26px
 		text-align: center
 		text-transform: uppercase
 		margin-bottom: 100px
 		position: relative
+		@media screen and ( max-width: 992px )
+			font-size: 22px
 		@media screen and ( max-width: 768px )
 			font-size: 22px
 		@media screen and ( max-width: 576px )
 			font-size: 18px
+		&_ad
+			margin-bottom: 55px !important
 .section-cta
     text-align: center
     &__title
@@ -118,4 +123,20 @@
 			transform: translateX(-50%)
 			left: 50%
 			@media screen and ( max-width: 768px )
+				display: none
+	&-white
+		&::after
+			content: ''
+			width: 920px
+			height: 23px
+			background-color: #fff
+			position: absolute
+			bottom: 0
+			left: 0
+			z-index: -1
+			transform: translateX(-50%)
+			left: 50%
+			@media screen and ( max-width: 992px )
+				width: 780px
+			@media screen and ( max-width: 799px )
 				display: none
