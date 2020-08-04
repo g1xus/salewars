@@ -4,7 +4,14 @@ mixin how-we-work
             +headline('Как будет проходить? ', 'underline-yellow underline-yellow_hww')
             .how-we-work__wrapper
                 .how-we-work__item
-                    img.how-we-work__img(src = 'img/steps/1.png', alt="Процент")
+                    .ko-progress-circle#circle33
+                        .ko-circle
+                            .full.ko-progress-circle__slice
+                                .ko-progress-circle__fill(style='background-color: #43a8f6;')
+                            .ko-progress-circle__slice
+                                .ko-progress-circle__fill(style='background-color: #43a8f6;')
+                                .ko-progress-circle__fill.ko-progress-circle__bar(style='background-color: #43a8f6;')
+                        .ko-progress-circle__overlay#overlay1
                     h4.how-we-work__title Сбор заявок
                     p.how-we-work__text Мы объединим от 30 до 50 розничных магазинов и компаний Челябинска в одном значимом городском мероприятии — «Битве Скидок». 
                         br 
@@ -14,13 +21,27 @@ mixin how-we-work
 
 
                 .how-we-work__item
-                    img.how-we-work__img(src = 'img/steps/2.png', alt="Процент")
+                    .ko-progress-circle#circle66
+                        .ko-circle
+                            .full.ko-progress-circle__slice
+                                .ko-progress-circle__fill(style='background-color: #32b228;')
+                            .ko-progress-circle__slice
+                                .ko-progress-circle__fill(style='background-color: #32b228;')
+                                .ko-progress-circle__fill.ko-progress-circle__bar(style='background-color: #32b228;')
+                        .ko-progress-circle__overlay#overlay2
                     h4.how-we-work__title Запуск рекламы
                     p.how-we-work__text За месяц до мероприятия мы запустим рекламную кампанию по Челябинску и области с общим охватом — 1 500 000 человек.
 
 
                 .how-we-work__item
-                    img.how-we-work__img(src = 'img/steps/3.png', alt="Процент")
+                    .ko-progress-circle#circle100
+                        .ko-circle
+                            .full.ko-progress-circle__slice
+                                .ko-progress-circle__fill(style='background-color: #d60505;')
+                            .ko-progress-circle__slice
+                                .ko-progress-circle__fill(style='background-color: #d60505;')
+                                .ko-progress-circle__fill.ko-progress-circle__bar(style='background-color: #d60505;')
+                        .ko-progress-circle__overlay#overlay3
                     h4.how-we-work__title Распродажа
                     p.how-we-work__text 23, 24 и 25 сентября мы проведем «Битву Скидок», о которой к моменту старта будут знать более миллиона жителей города и области. 
                         br 

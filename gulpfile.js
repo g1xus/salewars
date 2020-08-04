@@ -173,6 +173,7 @@ function cb() {}
 
 function watchFiles(params) {
   gulp.watch([path.watch.css], css);
+  gulp.watch(['src/sass/**/*.scss'], css);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.img], images);
   gulp.watch(['src/pug/pages/*.pug', 'src/pug/blocks/*.pug'], pugCompile);

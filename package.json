@@ -26,5 +26,6 @@
     "gulp-ttf2woff2": "^3.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^2.0.0"
-  }
+  },
+  "dependencies": {}
 }
