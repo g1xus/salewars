@@ -5,9 +5,9 @@ mixin ad-company-element(path, title)
 mixin ad-company
     section.section.ad-company.black
         .container
-            .section-headline.section-headline_ad
+            .section-headline.section-headline_with-par
                 h2.section-headline__text.underline-white Рекламная кампания “Битвы скидок”
-            p.ad-company-description Мы будем использовать все рекламные возможности социальных сетей, 
+            p.section-headline__description.section-headline__description_ad Мы будем использовать все рекламные возможности социальных сетей, 
                 | городских сайтов и поисковиков. В оффлайне основным каналом будет наружная реклама.
             .ad-company-partners
                 +ad-company-element('vk', 'Вконтакте')

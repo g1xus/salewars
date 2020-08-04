@@ -58,6 +58,7 @@ function pugCompile() {
           pretty:true
       }))
       .pipe(dest(path.build.html))
+      .pipe(browsersync.stream());
 }
 
 function css() {

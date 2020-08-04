@@ -65,8 +65,17 @@
 			font-size: 22px
 		@media screen and ( max-width: 576px )
 			font-size: 18px
-		&_ad
+		&_with-par
 			margin-bottom: 55px !important
+		&__description
+			@include lightFont
+			font-size: 16px
+			text-align: center
+			margin: 0 auto 80px auto
+			&_ad
+				width: 80%
+			&_rates
+				width: 40%
 .section-cta
     text-align: center
     &__title
@@ -83,23 +92,9 @@
 .underline
 	width: 100%
 	&-yellow
-		&::after
-			content: ''
-			width: 650px
-			height: 23px
-			background-color: $info
-			position: absolute
-			bottom: 0
-			left: 0
-			z-index: -1
-			transform: translateX(-50%)
-			left: 50%
-			@media screen and ( max-width: 992px )
-				display: none
-		&__for-what
+		&_hww, &_fw, &_rates
 			&::after
 				content: ''
-				width: 900px
 				height: 23px
 				background-color: $info
 				position: absolute
@@ -110,10 +105,19 @@
 				left: 50%
 				@media screen and ( max-width: 992px )
 					display: none
+		&_hww
+			&::after
+				width: 540px
+		&_fw
+			&::after
+				width: 790px
+		&_rates
+			&::after
+				width: 200px
 	&-green
 		&::after
 			content: ''
-			width: 700px
+			width: 610px
 			height: 23px
 			background-color: $succes
 			position: absolute

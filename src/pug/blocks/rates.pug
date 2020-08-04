@@ -1,0 +1,63 @@
+mixin card(role, roleName, okeys)
+    .card
+        .animate-icon.animated.infinite.pulse.delay-4s
+            img.animate-img(src=`img/rates/${roleName}.svg` alt=role)
+        .card-title(id=roleName) #{role}
+            span.card-title-arrow(id=`arrow-${roleName}`)
+        .card-content(id=`${roleName}-content`)
+            ul
+                li
+                    i.icon-ok
+                    |Размещение участника во всех сообществах в социальных сетях проекта,
+                    | вхождение в подборки по категориям
+                li
+                    i.icon-ok
+                    |Фирменная символика мероприятия: фирменный стиль, правила оформления,
+                    | макеты листовок, наклеек и ценников.
+                li
+                    i.icon-ok
+                    |Консультация маркетологов, как правильно подготовится к мероприятию.
+                if okeys > 3
+                    li
+                        i.icon-ok
+                        |Размещение участника во всех сообществах в социальных сетях проекта,
+                        | вхождение в подборки по категориям с отдельной рекламной кампанией
+                else
+                    li
+                        i.icon-cancel
+                        |Размещение участника во всех сообществах в социальных сетях проекта,
+                        | вхождение в подборки по категориям с отдельной рекламной кампанией
+                if okeys > 4
+                    li
+                        i.icon-ok
+                        |Отдельная рекламная кампания по целевой аудитории участника с охватом от
+                        | 1 до 2 миллионов человек.
+                else
+                    li
+                        i.icon-cancel
+                        |Отдельная рекламная кампания по целевой аудитории участника с охватом от
+                        | 1 до 2 миллионов человек.
+                if okeys > 5
+                    li
+                        i.icon-ok
+                        |Главный партнер проекта. Присутствие на всех рекламных носителях и во
+                        | всех каналах коммуникаций «Битвы скидок»
+                else
+                    li
+                        i.icon-cancel
+                        |Главный партнер проекта. Присутствие на всех рекламных носителях и во
+                        | всех каналах коммуникаций «Битвы скидок»
+            a.card-content-price(href="#") Узнать цену
+mixin rates
+    section.section.rates.black
+        .container
+            .section-headline.section-headline_with-par
+                h2.section-headline__text.underline-yellow.underline-yellow_rates Тарифы
+            p.section-headline__description.section-headline__description_rates Стоимость участия в «Битве Скидок» от 49.990 рублей. 
+                | Выберите наиболее подходящий для вас тариф
+            .card-holder
+                +card('Участник', 'member', 3)
+                +card('Участник+', 'member_plus', 4)
+                +card('Вип', 'vip', 5)
+                +card('Хэдлайнер', 'headliner', 6)
+                
