@@ -1,0 +1,74 @@
+.faq
+    background: url(../img/blue-bg.jpg) center no-repeat
+    background-size: cover
+    &-accordion
+        color: #000000
+        background-color: #fff
+        padding: 25px 25px 0 25px
+        &-headline
+            display: flex
+            justify-content: space-between
+            cursor: pointer
+            &__text
+                @include boldFont
+                font-size: 20px
+                margin: 0
+                padding-bottom: 25px
+                @media screen and ( max-width: 768px )
+                    font-size: 16px
+                    padding-bottom: 15px
+                    width: 80%
+                    
+        &__description
+            @include lightFont
+            font-size: 18px
+            padding-bottom: 30px
+            display: none
+            @media screen and ( max-width: 768px )
+                font-size: 14px
+                padding-bottom: 20px
+.icon-down
+    position: relative
+    transition-duration: 1s
+    &::after
+        content: ''
+        position: absolute
+        width: 25px
+        height: 25px
+        right: 30px
+        background: url(../img/down.svg) center no-repeat
+        background-size: cover
+#head1 + .faq-accordion__description
+    display: block
+.down-arrow
+        width: 12px
+        height: 12px
+        position: relative
+        display: block
+        margin-right: 30px
+        margin-top: 10px
+        z-index: 3
+        &__element
+            width: 100%
+            height: 3px
+            display: block
+            transition: all .3s ease-in
+            position: absolute
+            &_1
+                top: 0
+                left: -3px
+                transform: rotate(45deg)
+                background-color: $info
+                &-active
+                    background-color: lighten($info, 20%)
+                    top: 0
+                    transform: rotate(-45deg)
+            &_2
+                top: 0
+                left: 3px
+                transform: rotate(-45deg)
+                background-color: $info
+                &-active
+                    background-color: lighten($info, 20%)
+                    top: 0
+                    transform: rotate(45deg)

@@ -61,10 +61,13 @@
 		position: relative
 		@media screen and ( max-width: 992px )
 			font-size: 22px
+			margin-bottom: 90px
 		@media screen and ( max-width: 768px )
 			font-size: 22px
+			margin-bottom: 70px
 		@media screen and ( max-width: 576px )
 			font-size: 18px
+			margin-bottom: 50px
 		&_with-par
 			margin-bottom: 55px !important
 		&__description
@@ -94,7 +97,7 @@
 .underline
 	width: 100%
 	&-yellow
-		&_hww, &_fw, &_rates
+		&_hww, &_fw, &_rates, &_faq
 			&::after
 				content: ''
 				height: 23px
@@ -116,6 +119,9 @@
 		&_rates
 			&::after
 				width: 200px
+		&_faq
+			&::after
+				width: 690px
 	&-green
 		&::after
 			content: ''
@@ -146,7 +152,3 @@
 				width: 780px
 			@media screen and ( max-width: 799px )
 				display: none
-#circle
-	margin: 20px
-	width: 200px
-	height: 200px

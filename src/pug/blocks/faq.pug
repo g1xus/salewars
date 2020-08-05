@@ -1,0 +1,25 @@
+mixin accEl(headline, text, number)
+    mixin downArrow(arrNumber)
+        .down-arrow
+            if arrNumber == 1
+                span.down-arrow__element.down-arrow__element_1.down-arrow__element_1-active(class=`arrf${number}`)
+                span.down-arrow__element.down-arrow__element_2.down-arrow__element_2-active(class=`arrs${number}`)
+            else
+                span.down-arrow__element.down-arrow__element_1(class=`arrf${number}`)
+                span.down-arrow__element.down-arrow__element_2(class=`arrs${number}`)
+        
+    .faq-accordion__element
+        .faq-accordion-headline(id=`head${number}`)
+            h4.faq-accordion-headline__text #{headline}
+            +downArrow(number)
+        .faq-accordion__description(id=`descr${number}`) #{text}
+mixin faq
+    section.section.faq.white
+        .container
+            +headline('Часто задаваемые вопросы', 'underline-yellow underline-yellow_faq')
+            .faq-accordion
+                .faq-accordion__wrapper
+                    +accEl('Вдруг мою компанию не заметят среди остальных?', 'Мы проведем рекламную кампанию с охватом в десятки раз больше, чем вы можете запустить сами. Чем больше участников в «Битве скидок», тем больше общий охват аудитории.', '1')
+                    +accEl('Зачем делать скидки?', 'Цены на товары растут, а доходы населения остались прежними. Как следствие, количество покупок снизилось, а желание покупать — осталось. Люди и сейчас готовы потратить деньги, но только с условием, что покупка будет очень выгодной. Потенциальные покупатели ждут момента снижения цен и внимательно следят за акциями и распродажами.', '2')
+                    +accEl('Как сформирована цена участия?', 'Средства полученные от участников мы вложим в рекламный бюджет мероприятия. Первая цель — охватить максимально возможное количество жителей Москвы и Московской области. Вторая — показать мощный результат всем участникам, и с еще большим успехом провести следующую «Битву Скидок». За стоимость участия в «Битве скидок» вы получаете рекламную кампанию с охватом 6,5 миллионов человек. Представьте, что умножите свой рекламный бюджет в 10 раз. В «Битве Скидок» нам важно привлечь буквально каждого жителя Москвы и Московской области. Поэтому мы выделяем максимальный бюджет на рекламу.', '3')
+
