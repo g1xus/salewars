@@ -155,3 +155,41 @@
 				width: 780px
 			@media screen and ( max-width: 799px )
 				display: none
+.form
+	text-align: center
+	width: 100%
+	&-headline
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		&__input
+			flex-basis: 29%
+			margin-bottom: 30px
+			@media screen and ( max-width: 992px )
+				flex-basis: 45%
+			@media screen and ( max-width: 768px )
+				flex-basis: 40%
+			@media screen and ( max-width: 576px )
+				flex-basis: 100%
+	&-company-name__input
+		width: 100%
+		margin-bottom: 30px
+
+	&-msg_input
+		width: 100%
+		margin-bottom: 30px	
+		resize: none
+		border-width: 2px
+[type='tel']
+	@media screen and ( max-width: 992px )
+		flex-basis: 100%
+	@media screen and ( max-width: 768px )
+		flex-basis: 100%
+.input
+	@include lightFont
+	padding: 15px
+	border-radius: 0
+	border-style: solid
+	border-color: #dddddd
+	&:focus
+		outline-color: darken(#dddddd, 20%)

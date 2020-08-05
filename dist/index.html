@@ -15,15 +15,15 @@
       <div class="container">
         <div class="header-wrapper"><a class="header-logo" href="http://g1xus.ru/salewars" title="Битва Скидок"><img src="img/logotype.png" alt="БИТВА СКИДОК"/></a>
           <div class="header-toggler"><span class="header-toggler__element header-toggler__element_1"></span><span class="header-toggler__element header-toggler__element_2"></span><span class="header-toggler__element header-toggler__element_3"></span></div>
-          <nav class="header-nav"><a class="header-nav__link dark-link" href="#how-we-work">Как будет проходить</a><a class="header-nav__link dark-link" href="#who-can">Кто может учавствовать</a><a class="header-nav__link dark-link" href="#">Тарифы</a><a class="header-nav__link dark-link" href="#ad-company">Организаторы</a><a class="header-nav__link dark-link" href="#">Контакты</a><a class="header-nav__link dark-link" href="#">Учавствовать</a>
+          <nav class="header-nav"><a class="header-nav__link dark-link" href="#how-we-work">Как будет проходить</a><a class="header-nav__link dark-link" href="#who-can">Кто может учавствовать</a><a class="header-nav__link dark-link" href="#rates">Тарифы</a><a class="header-nav__link dark-link" href="#sponsors">Организаторы</a><a class="header-nav__link dark-link" href="#contacts">Контакты</a><a class="header-nav__link dark-link" href="#">Учавствовать</a>
           </nav>
         </div>
       </div>
-      <div class="parallax__wrapper">
+      <div class="parallax__wrapper" id="parallax__wrapper">
         <div class="parallax__background parallax__background_1"></div>
         <div class="parallax__background parallax__background_2"></div>
         <div class="parallax__background parallax__background_3"></div>
-        <div class="header-hero-parallax__content"> <img class="header-hero-parallax__suptext" src="img/parallax/sup-text.jpg" alt="Станьте участником"/><img class="header-hero-parallax__maintext" src="img/parallax/main-text.png" alt="Станьте участником"/><img class="header-hero-parallax__subtext" src="img/parallax/sub-text.png" alt="Станьте участником"/></div>
+        <div class="header-hero-parallax__content"> <img class="header-hero-parallax__suptext" src="img/parallax/sup-text.jpg" alt="Станьте участником"/><img class="header-hero-parallax__maintext" src="img/parallax/main-text.png" alt="Масштабной осенней распродажи"/><img class="header-hero-parallax__subtext" src="img/parallax/sub-text.png" alt="в Челябинске"/></div>
       </div>
       <div class="container">
         <div class="header-information">
@@ -247,6 +247,7 @@
         </div><span class="ad-company__wecan">Приведем людей из интернета в ваш магазин!</span>
       </div>
     </section>
+    <div id="rates"></div>
     <section class="section rates black">
       <div class="container">
         <div class="section-headline section-headline_with-par">
@@ -389,12 +390,47 @@
         </div>
       </div>
     </section>
+    <div id="sponsors"></div>
     <section class="section sponsors black">
       <div class="container">
         <div class="section-headline">
           <h2 class="section-headline__text underline-yellow underline-yellow_sp">Организаторы проекта</h2>
         </div><img class="sponsors__img" src="img/sarafan.jpg"/>
         <p class="sponsors__text">Мы — маркетинговое агентство Sarafan. С 2013 года приводим людей из интернета в розничные магазины. Мы работаем с розничной торговлей и знаем все, ну или почти все, «подводные камни». Специализируемся на региональных городах-миллионниках. <br/><br/>Провели более 150 распродаж в Екатеринбурге, Казани, Челябинске, Нижнем Новгороде, Перми, Тюмени и Санкт-Петербурге. Рост выручки во время акций у наших клиентов составляет 300-800%. <br/><br/>Мы — фанаты маркетинга. Наша страсть — создавать очереди в розничных магазинах. Техники, которые мы используем, проверены и эффективны. Секрет в том, что мы не боимся работать с «живой аудиторией» и приводим людей из онлайна в оффлайн.</p>
+      </div>
+    </section>
+    <div id="contacts"></div>
+    <section class="section contacts black">
+      <div class="parallax__background parallax__background-contacts"></div>
+      <div class="container">
+        <div class="parallax__wrapper">
+          <div class="contacts-parallax-content">
+            <h2 class="contacts__headline">Остались вопросы?</h2>
+            <p class="contacts__description">Мы всегда рады обсудить с вами подробности. <br/>Свяжитесь с нами по указанным контактам в форме или оставьте свои контактные данные!</p>
+            <div class="contacts-wrapper">
+              <div class="contacts-el">
+                <div class="contacts-el-icon"><img class="contacts-el-icon__img" src="img/contacts/phone.svg" alt="phone"/></div><a class="contacts-el__number" href="tel:+7 (351) 750-67-29">+7 (351) 750-67-29</a>
+              </div>
+              <div class="contacts-el">
+                <div class="contacts-el-icon"><img class="contacts-el-icon__img" src="img/contacts/pin.svg" alt="pin"/></div>
+                <address class="contacts-el__address">г. Челябинск, ул. Воровского 15-г, 5 этаж</address>
+              </div>
+              <div class="contacts-el">
+                <div class="contacts-el-icon"><img class="contacts-el-icon__img" src="img/contacts/mail.svg" alt="mail"/></div><a class="contacts-el__email" href="mailto:bitvaskidok@gmail.com">bitvaskidok@gmail.com</a>
+              </div>
+            </div>
+            <form class="form" action="#">
+              <div class="form-headline">
+                <input class="form-headline__input input" type="text" placeholder="Имя"/>
+                <input class="form-headline__input input" type="email" placeholder="Email"/>
+                <input class="form-headline__input input" type="tel" placeholder="Телефон"/>
+                <input class="form-company-name__input input" type="text" placeholder="Название компании"/>
+                <textarea class="form-msg_input input" placeholder="Сообщение" rows="10" wrap="soft"></textarea>
+              </div>
+              <button class="button" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

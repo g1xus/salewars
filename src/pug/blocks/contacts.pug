@@ -1,0 +1,31 @@
+mixin contacts
+    section.section.contacts.black
+        .parallax__background.parallax__background-contacts
+        .container
+            .parallax__wrapper
+                .contacts-parallax-content
+                    h2.contacts__headline Остались вопросы?
+                    p.contacts__description Мы всегда рады обсудить с вами подробности. 
+                        br
+                        |Свяжитесь с нами по указанным контактам в форме или оставьте свои контактные данные!
+                    .contacts-wrapper
+                        .contacts-el
+                            .contacts-el-icon
+                                img.contacts-el-icon__img(src='img/contacts/phone.svg' alt='phone')
+                            a.contacts-el__number(href='tel:+7 (351) 750-67-29') +7 (351) 750-67-29
+                        .contacts-el
+                            .contacts-el-icon
+                                img.contacts-el-icon__img(src='img/contacts/pin.svg' alt='pin')
+                            address.contacts-el__address г. Челябинск, ул. Воровского 15-г, 5 этаж
+                        .contacts-el
+                            .contacts-el-icon
+                                img.contacts-el-icon__img(src='img/contacts/mail.svg' alt='mail')
+                            a.contacts-el__email(href='mailto:bitvaskidok@gmail.com') bitvaskidok@gmail.com
+                    form.form(action='#')
+                        .form-headline
+                            input(type='text' placeholder='Имя').form-headline__input.input
+                            input(type='email' placeholder='Email').form-headline__input.input
+                            input(type='tel' placeholder='Телефон').form-headline__input.input
+                            input(type='text' placeholder='Название компании').form-company-name__input.input
+                            textarea(placeholder='Сообщение' rows='10' wrap='soft').form-msg_input.input
+                        button(type="submit").button Отправить

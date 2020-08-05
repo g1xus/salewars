@@ -35,6 +35,9 @@ if ($(window).width() > "992") {
       $(".parallax__background-event_4").css(
         "transform", `translate(${(x * 70) - 70}px, ${(y * 10) - 220}px)`
       );
+      $(".parallax__background-contacts").css(
+        "transform", `translate(${(x * 70) - 100}px, ${(y * 10) - 250}px)`
+      );
   
     });
   }
